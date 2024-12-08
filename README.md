@@ -58,4 +58,49 @@ This project is a simple Student Management System that provides APIs for managi
    - **Endpoint**: `/api/subjects/edit/:subjectId`
    - **Method**: `PATCH`
    - **Params**: `subjectId`
-   - **Request
+   - **Request Body**:
+     - `subject` (string): Subject name.
+     - `code` (string): Subject code.
+   - **Description**: Updates the details of an existing subject.
+
+4. **Delete Subject Data**
+   - **Endpoint**: `/api/subjects/remove/:subjectId`
+   - **Method**: `DELETE`
+   - **Params**: `subjectId`
+   - **Description**: Deletes a subject's record by ID.
+
+### Mark Endpoints
+
+1. **Create and Save Mark Details**
+   - **Endpoint**: `/api/marks/create`
+   - **Method**: `POST`
+   - **Request Body**:
+     - `subject` (string): Subject ID.
+     - `student` (string): Student ID.
+     - `mark` (number): Marks obtained.
+   - **Description**: Creates a new mark record for a student in a subject.
+
+2. **Edit/Update Mark Details**
+   - **Endpoint**: `/api/marks/edit/:markId`
+   - **Method**: `PATCH`
+   - **Params**: `markId`
+   - **Request Body**:
+     - `subject` (string): Subject ID.
+     - `student` (string): Student ID.
+     - `mark` (number): Marks obtained.
+   - **Description**: Updates the mark details for a student in a subject.
+
+3. **Delete Mark Data**
+   - **Endpoint**: `/api/marks/remove/:markId`
+   - **Method**: `DELETE`
+   - **Params**: `markId`
+   - **Description**: Deletes a mark record by ID.
+
+4. **Get Students Data Along With Their Marks**
+   - **Endpoint**: `/api/marks`
+   - **Method**: `GET`
+   - **Description**: Fetches details of all students along with their subjects and respective marks.
+
+
+### If you have any doubts please verify the docs directory which contains endpoints documentation
+
